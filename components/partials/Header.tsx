@@ -7,26 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import AppLogo from "./AppLogo";
 
-const swags = [
-  {
-    name: "Build a pack",
-
-    href: "/swags",
-  },
-  {
-    name: "Preset packs",
-    href: "/present",
-  },
-  {
-    name: "Bulk Swags",
-    href: "/bulk",
-  },
-];
-
-function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function NewHeader() {
   const [animateHeader, setAnimateHeader] = useState(false);
   const router = useRouter();
@@ -120,7 +100,10 @@ export default function NewHeader() {
                 placeholder="Search"
                 className="border px-3 py-2 focus:outline-0 focus:ring-0 text-sm font-medium"
               />
-              <FontAwesomeIcon icon={faSearch} className="absolute right-2 top-3 text-black text-opacity-40" />
+              <FontAwesomeIcon
+                icon={faSearch}
+                className="absolute right-2 top-3 text-black text-opacity-40"
+              />
             </div>
             <button className="ml-8 bg-black whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-transparent shadow-sm text-sm text-white">
               Connect wallet
@@ -159,42 +142,31 @@ export default function NewHeader() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {swags.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
-                      <a className="-m-3 flex items-start rounded-lg text-tertiary hover:text-secondary group">
-                        <span className="ml-3 text-sm">{item.name}</span>
-                      </a>
-                    </Link>
-                  ))}
-                </nav>
-              </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                {/* <Link href="/swags" passHref>
+                <Link href="/auction" passHref>
                   <a
                     className={
-                      (splitLocation[1] == "swags"
+                      (splitLocation[1] == "auction"
                         ? "text-yell border-b border-b-yell hover:text-secondary hover:border-b-secondary"
                         : "text-tertiary hover:text-secondary") +
                       "  text-sm font-medium"
                     }
                   >
-                    Swags
+                    Auctions
                   </a>
-                </Link> */}
-                <Link href="/pricing" passHref>
+                </Link>
+                <Link href="/collections" passHref>
                   <a
                     className={
-                      (splitLocation[1] == "pricing"
+                      (splitLocation[1] == "collections"
                         ? "text-yell border-b border-b-yell hover:text-secondary hover:border-b-secondary"
                         : "text-tertiary hover:text-secondary") +
                       "  text-sm font-medium"
                     }
                   >
-                    Pricing
+                    Collections
                   </a>
                 </Link>
                 <Link href="/about" passHref>
@@ -206,46 +178,26 @@ export default function NewHeader() {
                       "  text-sm font-medium"
                     }
                   >
-                    About Us
-                  </a>
-                </Link>
-                <Link href="/contact" passHref>
-                  <a
-                    className={
-                      (splitLocation[1] == "contact"
-                        ? "text-yell border-b border-b-yell hover:text-secondary hover:border-b-secondary"
-                        : "text-tertiary hover:text-secondary") +
-                      "  text-sm font-medium"
-                    }
-                  >
-                    Contact Us
-                  </a>
-                </Link>
-                <Link href="/faqs" passHref>
-                  <a
-                    className={
-                      (splitLocation[1] == "faqs"
-                        ? "text-yell border-b border-b-yell hover:text-secondary hover:border-b-secondary"
-                        : "text-tertiary hover:text-secondary") +
-                      "  text-sm font-medium"
-                    }
-                  >
-                    FAQs
+                    About
                   </a>
                 </Link>
               </div>
-              <div>
-                <Link href="/auth/login" passHref>
-                  <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-14 text-white bg-secondary">
-                    Get started
-                  </a>
-                </Link>
-
-                {/* <p className="mt-6 text-center text-14 text-gray-500">
-                  <Link href="#" passHref>
-                    <a className="text-black hover:secondary">Sign in</a>
-                  </Link>
-                </p> */}
+              <div className="w-full flex flex-col space-y-3">
+                <div className="relative w-full">
+                  <input
+                    type="text"
+                    name="search"
+                    placeholder="Search"
+                    className="border px-3 py-2 focus:outline-0 focus:ring-0 text-sm font-medium w-full"
+                  />
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    className="absolute right-2 top-3 text-black text-opacity-40"
+                  />
+                </div>
+                <button className="bg-black whitespace-nowrap inline-flex items-center justify-center px-3 py-2 border border-transparent shadow-sm text-sm text-white">
+                  Connect wallet
+                </button>
               </div>
             </div>
           </div>
