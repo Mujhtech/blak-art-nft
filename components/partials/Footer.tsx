@@ -21,7 +21,7 @@ export default function Footer() {
               <AppLogo />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-16 mt-16 text-black lg:gap-4 lg:grid-cols-4 xl:gap-10 md:mt-0">
+          <div className="grid grid-cols-2 gap-10 mt-16 text-black lg:gap-4 lg:grid-cols-4 xl:gap-10 md:mt-0">
             <div className="flex flex-col">
               <h3 className="text-black text-md font-black">About</h3>
               <ul className="mt-2 flex flex-col space-y-4 text-black text-sm font-normal">
@@ -90,8 +90,12 @@ export default function Footer() {
             </div>
             <div>
               <div className="flex flex-col">
-                <h3 className="text-black text-md font-black">Join the community</h3>
-                <p className="text-sm">Get early access to our news & releasees</p>
+                <h3 className="text-black text-md font-black">
+                  Join the community
+                </h3>
+                <p className="text-sm">
+                  Get early access to our news & releasees
+                </p>
                 <ul className="mt-4 flex flex-row space-x-1">
                   <li>
                     <Link href="#" passHref>
@@ -107,13 +111,7 @@ export default function Footer() {
                       </a>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="#" passHref>
-                      <a className="w-10 h-10  text-black flex items-center justify-center text-xl">
-                        <FontAwesomeIcon icon={faLinkedin} />
-                      </a>
-                    </Link>
-                  </li>
+
                   <li>
                     <Link href="#" passHref>
                       <a className="w-10 h-10  text-black flex items-center justify-center text-xl">
@@ -133,7 +131,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
       </div>
       <div className="mt-10 flex items-center justify-center">
         <h4 className="text-sm">&copy; blak.art 2022. All rights reserved</h4>

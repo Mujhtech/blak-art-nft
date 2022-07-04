@@ -32,7 +32,7 @@ const Home: NextPage = () => {
                 Explore collections
               </button>
               <Link href="#" passHref>
-                <a className="font-bold">
+                <a className="font-bold text-sm">
                   How it works <FontAwesomeIcon icon={faArrowRight} />
                 </a>
               </Link>
@@ -82,9 +82,9 @@ const Home: NextPage = () => {
       </section>
       <section className="mb-16">
         <div className="xl:px-20 md:px-6 !px-4 lg:!px-10 max-w-full mx-auto md:max-w-screen-6xl lg:max-w-screen-2xl 2xl:max-w-screen-3xl">
-          <div className="flex flex-col px-32">
+          <div className="flex flex-col px-10 md:px-32">
             <div className="mb-4 flex items-center justify-center">
-              <h2 className="text-3xl font-black">Browse by categories</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-center">Browse by categories</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 text-black md:mt-0">
               {categories.map((item: any, index: any) => (
@@ -96,15 +96,15 @@ const Home: NextPage = () => {
       </section>
       <section className="mb-16">
         <div className="xl:px-20 md:px-6 !px-4 lg:!px-10 max-w-full mx-auto md:max-w-screen-6xl lg:max-w-screen-2xl 2xl:max-w-screen-3xl">
-          <div className="flex flex-row items-center divide-x divide-black px-32">
-            <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:flex-row items-center divide-y md:divide-x divide-black px-10 md:px-32 space-y-6 md:space-y-0">
+            <div className="flex flex-col md:w-1/2">
               <h1 className="text-2xl font-extrabold">FAQs</h1>
               <p>
                 blak.art is a NFT Marketplace that enables gains you access to
                 the rarest art and collectibles on the internet.
               </p>
             </div>
-            <div className="flex flex-col w-1/2 pl-4 divide-y divide-black">
+            <div className="flex flex-col md:w-1/2 md:pl-4 divide-y divide-black">
               {faqs.map((item: any, key: any) => (
                 <FaqCard
                   key={key}
@@ -137,14 +137,14 @@ const Home: NextPage = () => {
               }}
               spaceBetween={4}
               slidesPerView={6}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={function () {}}
+              onSwiper={function (swiper) {}}
             >
               {Array(20)
                 .fill(undefined)
                 .map((_, index) => (
-                  <SwiperSlide>
-                    <div key={index}>
+                  <SwiperSlide key={index}>
+                    <div>
                       <h1 className="text-xs font-extrabold">
                         NEW COLLECTIONS DROPPING SOON.
                       </h1>
@@ -162,11 +162,11 @@ const Home: NextPage = () => {
               }}
               spaceBetween={4}
               slidesPerView={5}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={function () {}}
+              onSwiper={function (swiper) {}}
             >
               {gallerie1.map((image, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <Image src={image} height={300} width={300} key={index} />
                 </SwiperSlide>
               ))}
@@ -180,11 +180,11 @@ const Home: NextPage = () => {
               }}
               spaceBetween={4}
               slidesPerView={5}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={function () {}}
+              onSwiper={function (swiper) {}}
             >
               {gallerie2.map((image, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <Image src={image} height={300} width={300} key={index} />
                 </SwiperSlide>
               ))}
@@ -198,13 +198,13 @@ const Home: NextPage = () => {
               }}
               spaceBetween={4}
               slidesPerView={6}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={function () {}}
+              onSwiper={function (swiper) {}}
             >
               {Array(20)
                 .fill(undefined)
                 .map((_, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <div key={index}>
                       <h1 className="text-xs font-extrabold">
                         NEW COLLECTIONS DROPPING SOON.

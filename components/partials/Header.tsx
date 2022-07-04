@@ -35,7 +35,7 @@ export default function NewHeader() {
     >
       <div className="xl:px-20 md:px-6 !px-0 lg:!px-10 max-w-full mx-auto md:max-w-screen-7xl lg:max-w-screen-2xl 2xl:max-w-screen-3xl">
         <div className="flex justify-between items-center py-6 lg:justify-start md:space-x-10">
-          <div className="flex justify-start lg:flex space-x-10">
+          <div className="hidden justify-start lg:flex space-x-10">
             <Link href="/auction" passHref>
               <a
                 className={
@@ -70,6 +70,16 @@ export default function NewHeader() {
                 }
               >
                 About Us
+              </a>
+            </Link>
+          </div>
+          <div className="pl-4 flex lg:hidden">
+            <Link href="/" passHref>
+              <a>
+                <span className="sr-only">App logo</span>
+                <div className="logo">
+                  <AppLogo />
+                </div>
               </a>
             </Link>
           </div>
