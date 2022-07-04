@@ -15,6 +15,7 @@ import { nfts } from "../utils/nfts";
 import { categories } from "../utils/categories";
 import { gallerie1, gallerie2 } from "../utils/galleries";
 import Image from "next/image";
+import { Constant } from "../utils/constant";
 SwiperCore.use([Autoplay]);
 
 const Home: NextPage = () => {
@@ -84,7 +85,9 @@ const Home: NextPage = () => {
         <div className="xl:px-20 md:px-6 !px-4 lg:!px-10 max-w-full mx-auto md:max-w-screen-6xl lg:max-w-screen-2xl 2xl:max-w-screen-3xl">
           <div className="flex flex-col px-10 md:px-32">
             <div className="mb-4 flex items-center justify-center">
-              <h2 className="text-2xl md:text-3xl font-black text-center">Browse by categories</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-center">
+                Browse by categories
+              </h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 text-black md:mt-0">
               {categories.map((item: any, index: any) => (
@@ -139,6 +142,7 @@ const Home: NextPage = () => {
               slidesPerView={6}
               onSlideChange={function () {}}
               onSwiper={function (swiper) {}}
+              breakpoints={Constant.BREAKPOINT}
             >
               {Array(20)
                 .fill(undefined)
@@ -154,7 +158,7 @@ const Home: NextPage = () => {
             </Swiper>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-3 md:mt-10">
             <Swiper
               autoplay={{
                 delay: 2000,
@@ -164,6 +168,7 @@ const Home: NextPage = () => {
               slidesPerView={5}
               onSlideChange={function () {}}
               onSwiper={function (swiper) {}}
+              breakpoints={Constant.BREAKPOINT}
             >
               {gallerie1.map((image, index) => (
                 <SwiperSlide key={index}>
@@ -172,7 +177,7 @@ const Home: NextPage = () => {
               ))}
             </Swiper>
           </div>
-          <div className="mt-2 mb-10">
+          <div className="mt-2 mb-3 md:mb-10">
             <Swiper
               autoplay={{
                 delay: 2000,
@@ -182,6 +187,7 @@ const Home: NextPage = () => {
               slidesPerView={5}
               onSlideChange={function () {}}
               onSwiper={function (swiper) {}}
+              breakpoints={Constant.BREAKPOINT}
             >
               {gallerie2.map((image, index) => (
                 <SwiperSlide key={index}>
@@ -200,6 +206,7 @@ const Home: NextPage = () => {
               slidesPerView={6}
               onSlideChange={function () {}}
               onSwiper={function (swiper) {}}
+              breakpoints={Constant.BREAKPOINT}
             >
               {Array(20)
                 .fill(undefined)
