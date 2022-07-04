@@ -99,7 +99,7 @@ const Home: NextPage = () => {
       </section>
       <section className="mb-16">
         <div className="xl:px-20 md:px-6 !px-4 lg:!px-10 max-w-full mx-auto md:max-w-screen-6xl lg:max-w-screen-2xl 2xl:max-w-screen-3xl">
-          <div className="flex flex-col md:flex-row items-center divide-y md:divide-x divide-black px-10 md:px-32 space-y-6 md:space-y-0">
+          <div className="flex flex-col md:flex-row items-center divide-y md:divide-y-0 md:divide-x divide-black px-10 md:px-32 space-y-6 md:space-y-0">
             <div className="flex flex-col md:w-1/2">
               <h1 className="text-2xl font-extrabold">FAQs</h1>
               <p>
@@ -158,7 +158,7 @@ const Home: NextPage = () => {
             </Swiper>
           </div>
 
-          <div className="mt-3 md:mt-10">
+          <div className="mt-3">
             <Swiper
               autoplay={{
                 delay: 2000,
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
               ))}
             </Swiper>
           </div>
-          <div className="mt-2 mb-3 md:mb-10">
+          <div className="mt-2 mb-3">
             <Swiper
               autoplay={{
                 delay: 2000,
