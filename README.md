@@ -2,6 +2,10 @@
 
 Blak Art NFT UI is a reusable/modularized UI component built with NextJs & TailwindCss. It's mobile-first responsive for developers to bootstrap any NFT project. 100% SEO compatible.
 
+## Demo
+
+(https://blak-art.netlify.app/)
+
 ## Tech Stack
 
 - `Next.js`
